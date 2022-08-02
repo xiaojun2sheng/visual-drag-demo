@@ -7,12 +7,6 @@
     "build": "vue-cli-service build",
     "deploy_dev": "set NODE_ENV=development&& npm run build && node ./deploy"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "FORCE_COLOR=1 node scripts/verify-commit.js"
-    }
-  },
   "lint-staged": {
     "src/**/*.{js,jsx}": "eslint",
     "src/**/*.{vue,scss,css,sass}": "stylelint --allow-empty-input"
