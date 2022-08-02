@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy_dev": "set NODE_ENV=development&& npm run build && node ./deploy"
   },
   "husky": {
     "hooks": {
@@ -47,6 +48,7 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-scss": "^3.21.0",
     "vue-template-compiler": "^2.6.11",
+    "scp2": "^0.5.0",
     "webpack": "^4.44.2"
   }
 }
