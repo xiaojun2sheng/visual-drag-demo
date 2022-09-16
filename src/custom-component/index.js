@@ -9,6 +9,7 @@ const components = [
     'RectShape',
     'LineShape',
     'VTable',
+    'VWangDemo',
 ]
 
 components.forEach(key => {
