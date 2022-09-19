@@ -7,7 +7,8 @@
             draggable
             :data-index="index"
         >
-            <span class="iconfont" :class="'icon-' + item.icon"></span>
+            <span>{{ item.label }}</span>
+            <!-- <span class="iconfont icontishigantanhao"></span> -->
         </div>
     </div>
 </template>

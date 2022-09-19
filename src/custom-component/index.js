@@ -1,15 +1,19 @@
 import Vue from 'vue'
 
 const components = [
-    'CircleShape',
-    'Picture',
+    // 'CircleShape',
+    // 'Picture',
     'VText',
-    'VButton',
-    'Group',
-    'RectShape',
-    'LineShape',
-    'VTable',
-    'VWangDemo',
+    // 'VButton',
+    // 'Group',
+    // 'RectShape',
+    // 'LineShape',
+    // 'VTable',
+    'VDemo1',
+    'VDemo2',
+    'VDemo3',
+    'VDemo4',
+    'VDemo5'
 ]
 
 components.forEach(key => {

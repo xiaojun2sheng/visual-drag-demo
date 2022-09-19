@@ -1,13 +1,11 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
     <div class="content">
-        wang-demo
+        VDemo1
     </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { keycodes } from '@/utils/shortcutKey.js'
 import request from '@/utils/request'
 import OnEvent from '../common/OnEvent'
 
@@ -36,5 +34,8 @@ export default {
 .content {
     font-size: 18px;
     background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>
