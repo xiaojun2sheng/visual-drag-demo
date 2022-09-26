@@ -101,9 +101,9 @@ const list = [
         },
     },
     {
-        component: 'VDemo3',
-        label: 'VDemo3',
-        propValue: 'VDemo3',
+        component: 'BarChart',
+        label: '柱状图',
+        propValue: 'BarChart',
         icon: 'wenben',
         request: {
             method: 'GET',
@@ -126,9 +126,9 @@ const list = [
         },
     },
     {
-        component: 'VDemo4',
-        label: 'VDemo4',
-        propValue: 'VDemo4',
+        component: 'BubbleChart',
+        label: '气泡图',
+        propValue: 'BubbleChart',
         icon: 'wenben',
         request: {
             method: 'GET',
@@ -151,9 +151,9 @@ const list = [
         },
     },
     {
-        component: 'VDemo5',
-        label: 'VDemo5',
-        propValue: 'VDemo5',
+        component: 'MeterChart',
+        label: '仪表盘',
+        propValue: 'MeterChart',
         icon: 'wenben',
         request: {
             method: 'GET',

@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
     <div class="content">
-        <div ref="refPieChart" class="myChart"></div>
+        <div ref="refBarChart" class="myChart"></div>
     </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
     extends: OnEvent,
     props: {
         request: {
-            type: Object, 
+            type: Object,
             default: () => {},
         },
     },
@@ -21,34 +21,20 @@ export default {
         return {
             myChart: null,
             option: {
-                title: {
-                    text: '饼状图',
-                    subtext: '饼状图',
-                    left: 'center'
+                xAxis: {
+                    type: 'category',
+                    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
                 },
-                tooltip: {
-                    trigger: 'item'
-                },
-                legend: {
-                    orient: 'vertical',
-                    left: 'left'
+                yAxis: {
+                    type: 'value'
                 },
                 series: [
                     {
-                    name: 'Access From',
-                    type: 'pie',
-                    radius: '50%',
-                    data: [
-                        { value: 1048, name: '事件' },
-                        { value: 735, name: '剧本' },
-                        { value: 300, name: '告警' }
-                    ],
-                    emphasis: {
-                        itemStyle: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                        }
+                    data: [120, 200, 150, 80, 70, 110, 130],
+                    type: 'bar',
+                    showBackground: true,
+                    backgroundStyle: {
+                        color: 'rgba(180, 180, 180, 0.2)'
                     }
                     }
                 ]
@@ -58,7 +44,6 @@ export default {
     computed: {
     },
     mounted() {
-        window.addEventListener('resize', this.resizeHandler)
         this.drawLine();
     },
     // http://39.106.84.29:6266/mcb/api/questionnaire/list?limit=10&pageNo=1"
@@ -72,11 +57,9 @@ export default {
         this.request && this.cancelRequest()
     },
     methods: {
-        resizeHandler() {
-            this.myChart.resize()
-        },
         drawLine(){
-            this.myChart = this.$echarts.init(this.$refs.refPieChart);
+            debugger
+            this.myChart = this.$echarts.init(this.$refs.refBarChart);
             this.myChart.setOption(this.option);
         }
     },

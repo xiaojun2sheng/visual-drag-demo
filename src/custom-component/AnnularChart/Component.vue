@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/no-v-html -->
 <template>
     <div class="content">
-        <div id="myChart" ref="refMyChart"></div>
+        <div ref="refAnnularChart" class="myChart"></div>
     </div>
 </template>
 
@@ -79,7 +79,7 @@ export default {
     },
     methods: {
         drawLine(){
-            let myChart = this.$echarts.init(this.$refs.refMyChart);
+            let myChart = this.$echarts.init(this.$refs.refAnnularChart);
             myChart.setOption(this.option);
         }
     },
@@ -92,7 +92,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    #myChart {
+    .myChart {
         width: 100%;
         height: 100%;
     }

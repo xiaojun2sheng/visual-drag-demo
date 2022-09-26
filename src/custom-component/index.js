@@ -11,9 +11,9 @@ const components = [
     'VText',
     'PieChart',
     'AnnularChart',
-    'VDemo3',
-    'VDemo4',
-    'VDemo5'
+    'BarChart',
+    'BubbleChart',
+    'MeterChart'
 ]
 
 components.forEach(key => {
