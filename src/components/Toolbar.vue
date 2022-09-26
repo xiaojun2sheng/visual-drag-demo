@@ -37,7 +37,7 @@
             </div>
             
             <div class="right_btn">
-                <el-button style="margin-left: 10px;" @click="preview(false)">预览</el-button>
+                <el-button style="margin-left: 10px;"  @click="preview(false)">预览</el-button>
                 <el-button type="primary" @click="save">保存</el-button>
             </div>
         </div>
