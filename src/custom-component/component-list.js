@@ -211,7 +211,7 @@ const list = [
     // },
     {
         component: 'VDemo1',
-        label: 'VDemo1',
+        label: '饼状图',
         propValue: 'VDemo1',
         icon: 'icona-Union7',
         request: {
