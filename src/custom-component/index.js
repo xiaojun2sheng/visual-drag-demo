@@ -2,13 +2,13 @@ import Vue from 'vue'
 
 const components = [
     // 'CircleShape',
-    // 'Picture',
-    'VText',
     // 'VButton',
     // 'Group',
     // 'RectShape',
     // 'LineShape',
     // 'VTable',
+    'Picture',
+    'VText',
     'VDemo1',
     'VDemo2',
     'VDemo3',

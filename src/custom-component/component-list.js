@@ -71,23 +71,6 @@ const list = [
     //     },
     // },
     // {
-    //     component: 'Picture',
-    //     label: '图片',
-    //     icon: 'tupian',
-    //     propValue: {
-    //         url: require('@/assets/title.jpg'),
-    //         flip: {
-    //             horizontal: false,
-    //             vertical: false,
-    //         },
-    //     },
-    //     style: {
-    //         width: 300,
-    //         height: 200,
-    //         borderRadius: '',
-    //     },
-    // },
-    // {
     //     component: 'RectShape',
     //     label: '矩形',
     //     propValue: '&nbsp;',
@@ -207,6 +190,23 @@ const list = [
     //         textAlign: 'center',
     //         color: '',
     //         backgroundColor: 'rgba(255, 255, 255, 1)',
+    //     },
+    // },
+    // {
+    //     component: 'Picture',
+    //     label: '图片',
+    //     icon: 'tupian',
+    //     propValue: {
+    //         url: require('@/assets/title.jpg'),
+    //         flip: {
+    //             horizontal: false,
+    //             vertical: false,
+    //         },
+    //     },
+    //     style: {
+    //         width: 300,
+    //         height: 200,
+    //         borderRadius: '',
     //     },
     // },
     {
