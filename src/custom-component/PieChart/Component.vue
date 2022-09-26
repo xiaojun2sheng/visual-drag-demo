@@ -21,8 +21,8 @@ export default {
         return {
             option: {
                 title: {
-                    text: 'Referer of a Website',
-                    subtext: 'Fake Data',
+                    text: '饼状图',
+                    subtext: '饼状图',
                     left: 'center'
                 },
                 tooltip: {
@@ -38,11 +38,9 @@ export default {
                     type: 'pie',
                     radius: '50%',
                     data: [
-                        { value: 1048, name: 'Search Engine' },
-                        { value: 735, name: 'Direct' },
-                        { value: 580, name: 'Email' },
-                        { value: 484, name: 'Union Ads' },
-                        { value: 300, name: 'Video Ads' }
+                        { value: 1048, name: '事件' },
+                        { value: 735, name: '剧本' },
+                        { value: 300, name: '告警' }
                     ],
                     emphasis: {
                         itemStyle: {
@@ -83,7 +81,6 @@ export default {
 <style lang="scss" scoped>
 .content {
     font-size: 18px;
-    background: gray;
     display: flex;
     justify-content: center;
     align-items: center;

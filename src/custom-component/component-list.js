@@ -210,9 +210,9 @@ const list = [
     //     },
     // },
     {
-        component: 'VDemo1',
+        component: 'PieChart',
         label: '饼状图',
-        propValue: 'VDemo1',
+        propValue: 'PieChart',
         icon: 'icona-Union7',
         request: {
             method: 'GET',

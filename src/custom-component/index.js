@@ -9,7 +9,7 @@ const components = [
     // 'VTable',
     'Picture',
     'VText',
-    'VDemo1',
+    'PieChart',
     'VDemo2',
     'VDemo3',
     'VDemo4',
