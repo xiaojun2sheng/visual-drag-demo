@@ -10,7 +10,7 @@ const components = [
     'Picture',
     'VText',
     'PieChart',
-    'VDemo2',
+    'AnnularChart',
     'VDemo3',
     'VDemo4',
     'VDemo5'
