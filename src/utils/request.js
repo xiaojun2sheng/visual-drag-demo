@@ -64,43 +64,20 @@ export function getURL(url) {
  * @param {string} responseType 需要修改的数据对应的类型
  * @returns
  */
-export default function requestWarpper(options, obj, key, responseType = 'object') {
-    let count = 0
-    let timer
+export default async function requestWarpper(options, obj, key, responseType = 'object') {
+    let result
     const url = options?.url
     if (url && !/^\d+$/.test(url) || urlRE.test(getURL(url))) {
-        if (!options.series) {
-            request(options, responseType)
-            .then(data => {
-                if (responseType === 'object' || responseType === 'array') {
-                    obj[key] = JSON.parse(data)
-                } else {
-                    obj[key] = data
-                }
-            })
-            .catch(err => Message.error(err?.message || err))
-        } else {
-            timer = setInterval(() => {
-                if (options.requestCount != 0 && options.requestCount <= count) {
-                    clearInterval(timer)
-                    return
-                }
-
-                count++
-                request(options, responseType)
-                .then(data => {
-                    if (responseType === 'object' || responseType === 'array') {
-                        obj[key] = JSON.parse(data)
-                    } else {
-                        obj[key] = data
-                    }
-                })
-                .catch(err => Message.error(err?.message || err))
-            }, options.time)
-        }
-    }
-
-    return function cancelRequest() {
-        clearInterval(timer)
+        return request(options, responseType)
+        .then(data => {
+            if (responseType === 'object' || responseType === 'array') {
+                result = JSON.parse(data)
+                return result
+            } else {
+                result = data
+                return result
+            }
+        })
+        .catch(err => Message.error(err?.message || err))
     }
 }

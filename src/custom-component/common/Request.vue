@@ -49,7 +49,7 @@
                     <el-button @click="addData">添加</el-button>
                 </div>
             </el-form-item>
-            <el-form-item label="定时触发">
+            <!-- <el-form-item label="定时触发">
                 <el-switch v-model="request.series"></el-switch>
                 <template v-if="request.series">
                     <p>触发间隔（毫秒）</p>
@@ -57,7 +57,7 @@
                     <p>触发次数（0 为无限）</p>
                     <el-input v-model="request.requestCount" type="number"></el-input>
                 </template>
-            </el-form-item>
+            </el-form-item> -->
         </el-form>
     </el-collapse-item>
 </template>
