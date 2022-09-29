@@ -12,6 +12,7 @@
     "src/**/*.{vue,scss,css,sass}": "stylelint --allow-empty-input"
   },
   "dependencies": {
+    "@vueuse/core": "^9.3.0",
     "core-js": "^3.6.5",
     "echarts": "^5.4.0",
     "element-ui": "^2.14.1",

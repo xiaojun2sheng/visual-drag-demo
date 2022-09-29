@@ -21,24 +21,6 @@ export default {
         return {
             myChart: null,
             option: {
-                tooltip: {
-                    formatter: '{a} <br/>{b} : {c}%'
-                },
-                series: [
-                    {
-                    name: 'Pressure',
-                    type: 'gauge',
-                    detail: {
-                        formatter: '{value}'
-                    },
-                    data: [
-                        {
-                        value: 50,
-                        name: 'SCORE'
-                        }
-                    ]
-                    }
-                ]
 
             }
         }
@@ -60,7 +42,6 @@ export default {
     },
     methods: {
         drawLine(){
-            debugger
             this.myChart = this.$echarts.init(this.$refs.refMeterChart);
             this.myChart.setOption(this.option);
         }

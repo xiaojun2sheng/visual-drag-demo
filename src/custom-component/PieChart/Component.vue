@@ -1,82 +1,29 @@
-<!-- eslint-disable vue/no-v-html -->
 <template>
-    <div class="content">
-        <div ref="refPieChart" class="myChart"></div>
+    <div class="content" ref="el">
+        <div ref="refChart" class="myChart"></div>
     </div>
 </template>
 
 <script>
-import request from '@/utils/request'
-import OnEvent from '../common/OnEvent'
+
+import { echartsMixin } from '../echartsUtils/echartsmixin.js'
+import { options } from './options'
 
 export default {
-    extends: OnEvent,
-    props: {
-        request: {
-            type: Object, 
-            default: () => {},
-        },
-    },
+    mixins: [ echartsMixin ],
     data() {
         return {
-            myChart: null,
-            option: {
-                title: {
-                    text: '饼状图',
-                    subtext: '饼状图',
-                    left: 'center'
-                },
-                tooltip: {
-                    trigger: 'item'
-                },
-                legend: {
-                    orient: 'vertical',
-                    left: 'left'
-                },
-                series: [
-                    {
-                    name: 'Access From',
-                    type: 'pie',
-                    radius: '50%',
-                    data: [
-                        { value: 1048, name: '事件' },
-                        { value: 735, name: '剧本' },
-                        { value: 300, name: '告警' }
-                    ],
-                    emphasis: {
-                        itemStyle: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                        }
-                    }
-                    }
-                ]
-            }
+            option: options
         }
     },
     computed: {
     },
     mounted() {
-        window.addEventListener('resize', this.resizeHandler)
         this.drawLine();
     },
-    // http://39.106.84.29:6266/mcb/api/questionnaire/list?limit=10&pageNo=1"
-    created() {
-        if (this.request) {
-            this.cancelRequest = request(this.request, this.propValue, 'data')
-        }
-    },
-    beforeDestroy() {
-        // 组件销毁时取消请求
-        this.request && this.cancelRequest()
-    },
     methods: {
-        resizeHandler() {
-            this.myChart.resize()
-        },
         drawLine(){
-            this.myChart = this.$echarts.init(this.$refs.refPieChart);
+            this.myChart = this.$echarts.init(this.$refs.refChart);
             this.myChart.setOption(this.option);
         }
     },
@@ -84,14 +31,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content {
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .myChart {
-        width: 100%;
-        height: 100%;
-    }
-}
+@import '../../styles/echarts.scss'
 </style>
