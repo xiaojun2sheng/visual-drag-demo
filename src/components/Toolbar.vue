@@ -3,17 +3,20 @@
         <div class="toolbar">
             <div>
                 <el-button @click="undo">撤消</el-button>
-                <el-button @click="redo">重做</el-button>
-                <label for="input" class="insert">插入图片</label>
-                <input
+                <label for="input" class="insert">插入图片
+                    <input
                     id="input"
                     type="file"
                     hidden
                     @change="handleFileChange"
                 />
+                </label>
+                
                 <el-button @click="clearCanvas">清空画布</el-button>
-                <el-button :disabled="!areaData.components.length" @click="compose">组合</el-button>
-                <el-button
+                <!-- 
+                    <el-button @click="redo">重做</el-button>
+                    <el-button :disabled="!areaData.components.length" @click="compose">组合</el-button>
+                    <el-button
                     :disabled="!curComponent || curComponent.isLock || curComponent.component != 'Group'"
                     @click="decompose"
                 >
@@ -22,7 +25,7 @@
 
                 <el-button :disabled="!curComponent || curComponent.isLock" @click="lock">锁定</el-button>
                 <el-button :disabled="!curComponent || !curComponent.isLock" @click="unlock">解锁</el-button>
-                <el-button @click="preview(true)">截图</el-button>
+                <el-button @click="preview(true)">截图</el-button> -->
 
                 <div class="canvas-config">
                     <span>画布大小</span>
@@ -37,6 +40,7 @@
             </div>
             
             <div class="right_btn">
+                <!-- <el-button style="margin-left: 10px;"  @click="preview(false)">预览</el-button> -->
                 <el-button style="margin-left: 10px;"  @click="preview(false)">预览</el-button>
                 <el-button type="primary" @click="save">保存</el-button>
             </div>
@@ -203,8 +207,12 @@ export default {
 
         preview(isScreenshot) {
             this.isScreenshot = isScreenshot
-            this.isShowPreview = true
             this.$store.commit('setEditMode', 'preview')
+            if (this.isScreenshot) {
+                this.isShowPreview = true
+            } else {
+                this.$router.push('./prepage')
+            }
         },
 
         save() {
@@ -276,7 +284,7 @@ export default {
         padding: 9px 15px;
         font-size: 12px;
         border-radius: 3px;
-        margin-left: 10px;
+        margin: 0 10px;
 
         &:active {
             color: #3a8ee6;

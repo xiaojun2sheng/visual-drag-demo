@@ -10,9 +10,9 @@ const routes = [
         component: () => import('@/views/Home'),
     },
     {
-        path: '/perview',
-        name: 'perview',
-        component: () => import('@/views/PerView'),
+        path: '/prepage',
+        name: 'prepage',
+        component: () => import('@/views/PrePage'),
     },
 ]
 
