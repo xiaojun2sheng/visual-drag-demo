@@ -14,7 +14,8 @@ const components = [
     'BarChart',
     'BubbleChart',
     'MeterChart',
-    'Earth'
+    'Earth',
+    'Table'
 ]
 
 components.forEach(key => {
