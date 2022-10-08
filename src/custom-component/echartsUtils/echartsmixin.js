@@ -23,7 +23,6 @@ export const echartsMixin = {
     },
     beforeDestroy() {
         // 组件销毁时取消请求
-        this.request && this.cancelRequest()
     },
     watch: {
         contentDom: {

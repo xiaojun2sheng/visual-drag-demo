@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/no-v-html -->
 <template>
     <div class="content">
         <div ref="refMeterChart" class="myChart"></div>
@@ -6,7 +5,6 @@
 </template>
 
 <script>
-import request from '@/utils/request'
 import OnEvent from '../common/OnEvent'
 
 export default {
@@ -33,12 +31,9 @@ export default {
     // http://39.106.84.29:6266/mcb/api/questionnaire/list?limit=10&pageNo=1"
     created() {
         if (this.request) {
-            this.cancelRequest = request(this.request, this.propValue, 'data')
         }
     },
     beforeDestroy() {
-        // 组件销毁时取消请求
-        this.request && this.cancelRequest()
     },
     methods: {
         drawLine(){

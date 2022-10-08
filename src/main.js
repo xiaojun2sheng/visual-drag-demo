@@ -4,7 +4,6 @@ import App from './App'
 import store from './store'
 import router from './router'
 import '@/custom-component' // 注册自定义组件
-
 import '@/assets/iconfont/iconfont.css'
 import '@/styles/animate.scss'
 import 'element-ui/lib/theme-chalk/index.css'

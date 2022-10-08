@@ -1,7 +1,9 @@
 <template>
     <div ref="container" class="bg">
-        <el-button v-if="!isScreenshot" class="close" @click="close">关闭</el-button>
-        <el-button v-else class="close" @click="htmlToImage">确定</el-button>
+        <div class="close">
+            <el-button @click="close">关闭</el-button>
+            <el-button @click="htmlToImage">截图</el-button>
+        </div>
         <div class="canvas-container">
             <div
                 class="canvas"
