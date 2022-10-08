@@ -44,6 +44,7 @@ export const echartsMixin = {
         async featchData () {
             if (this.request) {
                 let res = await request(this.request, this.propValue, 'data')
+                if (!res) return
                 console.dir(res.data)
             }
 

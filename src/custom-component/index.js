@@ -13,7 +13,8 @@ const components = [
     'AnnularChart',
     'BarChart',
     'BubbleChart',
-    'MeterChart'
+    'MeterChart',
+    'Earth'
 ]
 
 components.forEach(key => {
