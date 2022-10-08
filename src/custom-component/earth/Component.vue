@@ -117,23 +117,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .demoMain {
-    width: 100%;
-    height:100%;
-    background: transparent;
-    animation: animate1 1s infinite;
-    animation-iteration-count: 1;
-    animation-fill-mode:forwards;
-  }
-  @keyframes animate1 {
-    0% {
-      width: 0%;
-      height: 0%;
-      background: transparent;
-    }
-    100% {
-      width: 100%;
-      height:100%;
-    }
-  }
+  // .demoMain {
+  //   width: 100%;
+  //   height:100%;
+  //   background: transparent;
+  //   animation: animate1 1s infinite;
+  //   animation-iteration-count: 1;
+  //   animation-fill-mode:forwards;
+  // }
+  // @keyframes animate1 {
+  //   0% {
+  //     width: 0%;
+  //     height: 0%;
+  //     background: transparent;
+  //   }
+  //   100% {
+  //     width: 100%;
+  //     height:100%;
+  //   }
+  // }
 </style>

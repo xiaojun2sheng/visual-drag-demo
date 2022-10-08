@@ -1,9 +1,9 @@
 <template>
     <div ref="container" class="bg">
-        <div class="close">
+        <!-- <div class="close">
             <el-button @click="close">关闭</el-button>
             <el-button @click="htmlToImage">截图</el-button>
-        </div>
+        </div> -->
         <div class="canvas-container">
             <div
                 class="canvas"
@@ -57,7 +57,8 @@ export default {
         changeStyleWithScale,
 
         close() {
-            this.$emit('close')
+            this.$router.push('/')
+            // this.$emit('close')
         },
 
         htmlToImage() {
@@ -90,11 +91,11 @@ export default {
     align-items: center;
     justify-content: center;
     overflow: auto;
-    padding: 20px;
+    // padding-top: 20px;
 
     .canvas-container {
-        width: calc(100% - 40px);
-        height: calc(100% - 120px);
+        width: 100%; //calc(100% - 40px);
+        height: 100%; //calc(100% - 120px);
         overflow: auto;
 
         .canvas {
