@@ -22,7 +22,7 @@ export default {
         this.drawLine();
     },
     methods: {
-        drawLine(){
+        drawLine() {
             this.myChart = this.$echarts.init(this.$refs.refChart);
             this.myChart.setOption(this.option);
         }
