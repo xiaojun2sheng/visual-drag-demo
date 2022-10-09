@@ -13,9 +13,9 @@
                 </label>
                 
                 <el-button @click="clearCanvas">清空画布</el-button>
+                <!-- <el-button :disabled="!areaData.components.length" @click="compose">组合</el-button> -->
                 <!-- 
                     <el-button @click="redo">重做</el-button>
-                    <el-button :disabled="!areaData.components.length" @click="compose">组合</el-button>
                     <el-button
                     :disabled="!curComponent || curComponent.isLock || curComponent.component != 'Group'"
                     @click="decompose"

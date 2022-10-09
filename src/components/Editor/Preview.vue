@@ -10,7 +10,9 @@
             <div
                 class="canvas"
                 :style="{
-                    ...getCanvasStyle(canvasStyleData)
+                    ...getCanvasStyle(canvasStyleData),
+                    width: changeStyleWithScale(canvasStyleData.width) + 'px',
+                    height: changeStyleWithScale(canvasStyleData.height) + 'px', 
                 }"
             >
                 <ComponentWrapper
@@ -102,6 +104,8 @@ export default {
             background: #fff;
             position: relative;
             margin: auto;
+            width: 100%;
+            height: 100%;
         }
     }
 

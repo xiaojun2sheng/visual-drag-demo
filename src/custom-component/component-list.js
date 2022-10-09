@@ -225,6 +225,20 @@ const list = [
             color: '',
         },
     },
+    {
+        component: 'Div',
+        label: '空白区域',
+        propValue: 'Div',
+        style: {
+            width: 200,
+            height: 28,
+            backgroundColor: '',
+            fontSize: '',
+            fontWeight: 400,
+            textAlign: '',
+            color: '',
+        },
+    },
 ]
 
 for (let i = 0, len = list.length; i < len; i++) {

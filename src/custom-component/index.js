@@ -1,12 +1,6 @@
 import Vue from 'vue'
 
 const components = [
-    // 'CircleShape',
-    // 'VButton',
-    // 'Group',
-    // 'RectShape',
-    // 'LineShape',
-    // 'VTable',
     'Picture',
     'VText',
     'PieChart',
@@ -15,7 +9,8 @@ const components = [
     'BubbleChart',
     'MeterChart',
     'Earth',
-    'Table'
+    'Table',
+    'Div'
 ]
 
 components.forEach(key => {

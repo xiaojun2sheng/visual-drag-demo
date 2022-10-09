@@ -1,6 +1,10 @@
+const px2rem = require('postcss-px2rem')
 const CompressionPlugin = require('compression-webpack-plugin')
-
 const isProd = process.env.NODE_ENV === 'production'
+
+const postcss = px2rem({
+    remUnit: 16   //基准大小 baseSize，需要和rem.js中相同
+})
 
 module.exports = {
     publicPath: isProd ? '/visual-drag-demo/' : './',
@@ -17,4 +21,13 @@ module.exports = {
             }
         }
     },
+    css: {
+        loaderOptions: {
+          postcss: {
+            plugins: [
+              postcss
+            ]
+          }
+        }
+    }
 }
