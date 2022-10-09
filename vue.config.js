@@ -7,7 +7,7 @@ const postcss = px2rem({
 })
 
 module.exports = {
-    publicPath: isProd ? '/visual-drag-demo/' : './',
+    publicPath: './',
     configureWebpack: () => {
         if (isProd) {
             return {
