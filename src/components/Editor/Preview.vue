@@ -4,13 +4,13 @@
             <el-button @click="close">关闭</el-button>
             <el-button @click="htmlToImage">截图</el-button>
         </div> -->
+        <!-- width: changeStyleWithScale(canvasStyleData.width) + 'px',
+        height: changeStyleWithScale(canvasStyleData.height) + 'px', -->
         <div class="canvas-container">
             <div
                 class="canvas"
                 :style="{
-                    ...getCanvasStyle(canvasStyleData),
-                    width: changeStyleWithScale(canvasStyleData.width) + 'px',
-                    height: changeStyleWithScale(canvasStyleData.height) + 'px',
+                    ...getCanvasStyle(canvasStyleData)
                 }"
             >
                 <ComponentWrapper
