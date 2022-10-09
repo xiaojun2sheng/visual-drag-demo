@@ -13,7 +13,7 @@
                                 :value="item.value"
                             ></el-option>
                         </el-select>
-                        <el-input v-else v-model.number="curComponent.style[key]" type="number" />
+                        <el-input v-else v-model="curComponent.style[key]" />
                     </el-form-item>
                 </el-form>
             </el-collapse-item>

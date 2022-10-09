@@ -42,6 +42,7 @@ const list = [
         style: {
             width: 200,
             height: 28,
+            backgroundColor: '',
             fontSize: '',
             fontWeight: 400,
             lineHeight: '',
@@ -67,6 +68,7 @@ const list = [
         style: {
             width: 200,
             height: 28,
+            backgroundColor: '',
             fontSize: '',
             fontWeight: 400,
             lineHeight: '',
@@ -92,6 +94,7 @@ const list = [
         style: {
             width: 200,
             height: 28,
+            backgroundColor: '',
             fontSize: '',
             fontWeight: 400,
             lineHeight: '',
@@ -105,18 +108,10 @@ const list = [
         label: '柱状图',
         propValue: 'BarChart',
         icon: 'wenben',
-        request: {
-            method: 'GET',
-            data: [],
-            url: '',
-            series: false, // 是否定时发送请求
-            time: 1000, // 定时更新时间
-            paramType: '', // string object array
-            requestCount: 0, // 请求次数限制，0 为无限
-        },
         style: {
             width: 200,
             height: 28,
+            backgroundColor: '',
             fontSize: '',
             fontWeight: 400,
             lineHeight: '',
@@ -130,19 +125,11 @@ const list = [
         label: '气泡图',
         propValue: 'BubbleChart',
         icon: 'wenben',
-        request: {
-            method: 'GET',
-            data: [],
-            url: '',
-            series: false, // 是否定时发送请求
-            time: 1000, // 定时更新时间
-            paramType: '', // string object array
-            requestCount: 0, // 请求次数限制，0 为无限
-        },
         style: {
             width: 200,
             height: 28,
             fontSize: '',
+            backgroundColor: '',
             fontWeight: 400,
             lineHeight: '',
             letterSpacing: 0,
@@ -155,18 +142,10 @@ const list = [
         label: '仪表盘',
         propValue: 'MeterChart',
         icon: 'wenben',
-        request: {
-            method: 'GET',
-            data: [],
-            url: '',
-            series: false, // 是否定时发送请求
-            time: 1000, // 定时更新时间
-            paramType: '', // string object array
-            requestCount: 0, // 请求次数限制，0 为无限
-        },
         style: {
             width: 200,
             height: 28,
+            backgroundColor: '',
             fontSize: '',
             fontWeight: 400,
             lineHeight: '',
@@ -180,18 +159,10 @@ const list = [
         label: '地球',
         propValue: 'Earth',
         icon: 'wenben',
-        request: {
-            method: 'GET',
-            data: [],
-            url: '',
-            series: false, // 是否定时发送请求
-            time: 1000, // 定时更新时间
-            paramType: '', // string object array
-            requestCount: 0, // 请求次数限制，0 为无限
-        },
         style: {
             width: 200,
             height: 28,
+            backgroundColor: '',
             fontSize: '',
             fontWeight: 400,
             lineHeight: '',
@@ -204,19 +175,10 @@ const list = [
         component: 'Table',
         label: '表格',
         propValue: 'Table',
-        icon: 'icona-Union7',
-        request: {
-            method: 'GET',
-            data: [],
-            url: '',
-            series: false, // 是否定时发送请求
-            time: 1000, // 定时更新时间
-            paramType: '', // string object array
-            requestCount: 0, // 请求次数限制，0 为无限
-        },
         style: {
             width: 200,
             height: 28,
+            backgroundColor: '',
             fontSize: '',
             fontWeight: 400,
             lineHeight: '',
@@ -237,6 +199,8 @@ const list = [
             fontWeight: 400,
             textAlign: '',
             color: '',
+            x:0,
+            y: 0,
         },
     },
 ]
