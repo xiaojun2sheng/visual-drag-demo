@@ -27,12 +27,12 @@ export default {
             }
         },
 
-        redo(state) {
-            if (state.snapshotIndex < state.snapshotData.length - 1) {
-                state.snapshotIndex++
-                store.commit('setComponentData', deepCopy(state.snapshotData[state.snapshotIndex]))
-            }
-        },
+        // redo(state) {
+        //     if (state.snapshotIndex < state.snapshotData.length - 1) {
+        //         state.snapshotIndex++
+        //         store.commit('setComponentData', deepCopy(state.snapshotData[state.snapshotIndex]))
+        //     }
+        // },
 
         recordSnapshot(state) {
             // 添加新的快照

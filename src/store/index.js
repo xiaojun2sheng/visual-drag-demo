@@ -88,6 +88,7 @@ const data = {
         },
 
         addComponent(state, { component, index }) {
+            debugger
             if (index !== undefined) {
                 state.componentData.splice(index, 0, component)
             } else {

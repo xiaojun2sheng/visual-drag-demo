@@ -29,7 +29,6 @@ const list = [
         component: 'VText',
         label: '文字',
         propValue: '双击编辑文字',
-        icon: 'wenben',
         request: {
             method: 'GET',
             data: [],
@@ -55,7 +54,6 @@ const list = [
         component: 'PieChart',
         label: '饼状图',
         propValue: 'PieChart',
-        icon: 'icona-Union7',
         request: {
             method: 'GET',
             data: [],
@@ -81,7 +79,6 @@ const list = [
         component: 'AnnularChart',
         label: '环形图',
         propValue: 'AnnularChart',
-        icon: 'home',
         request: {
             method: 'GET',
             data: [],
@@ -107,7 +104,6 @@ const list = [
         component: 'BarChart',
         label: '柱状图',
         propValue: 'BarChart',
-        icon: 'wenben',
         style: {
             width: 200,
             height: 28,
@@ -124,7 +120,6 @@ const list = [
         component: 'BubbleChart',
         label: '气泡图',
         propValue: 'BubbleChart',
-        icon: 'wenben',
         style: {
             width: 200,
             height: 28,
@@ -141,7 +136,6 @@ const list = [
         component: 'MeterChart',
         label: '仪表盘',
         propValue: 'MeterChart',
-        icon: 'wenben',
         style: {
             width: 200,
             height: 28,
@@ -158,7 +152,6 @@ const list = [
         component: 'Earth',
         label: '地球',
         propValue: 'Earth',
-        icon: 'wenben',
         style: {
             width: 200,
             height: 28,

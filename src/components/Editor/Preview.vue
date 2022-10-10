@@ -10,7 +10,9 @@
             <div
                 class="canvas"
                 :style="{
-                    ...getCanvasStyle(canvasStyleData)
+                    ...getCanvasStyle(canvasStyleData),
+                    width: changeStyleWithScale(canvasStyleData.width) + 'px',
+                    height: changeStyleWithScale(canvasStyleData.height) + 'px',
                 }"
             >
                 <ComponentWrapper

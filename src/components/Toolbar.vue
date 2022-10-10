@@ -2,13 +2,13 @@
     <div>
         <div class="toolbar">
             <div>
-                <el-button @click="undo">撤消</el-button>
+                <!-- <el-button @click="undo">撤消</el-button> -->
                 <label for="input" class="insert">插入图片
                     <input
-                    id="input"
-                    type="file"
-                    hidden
-                    @change="handleFileChange"
+                        id="input"
+                        type="file"
+                        hidden
+                        @change="handleFileChange"
                 />
                 </label>
                 
@@ -47,7 +47,7 @@
         </div>
 
         <!-- 预览 -->
-        <Preview v-if="isShowPreview" :is-screenshot="isScreenshot" @close="handlePreviewChange" />
+        <!-- <Preview v-if="isShowPreview" :is-screenshot="isScreenshot" @close="handlePreviewChange" /> -->
     </div>
 </template>
 
@@ -55,14 +55,14 @@
 import generateID from '@/utils/generateID'
 import toast from '@/utils/toast'
 import { mapState } from 'vuex'
-import Preview from '@/components/Editor/Preview'
+// import Preview from '@/components/Editor/Preview'
 import { commonStyle, commonAttr } from '@/custom-component/component-list'
 import eventBus from '@/utils/eventBus'
 import { deepCopy, $ } from '@/utils/utils'
 import { divide, multiply } from 'mathjs'
 
 export default {
-    components: { Preview },
+    // components: { Preview },
     data() {
         return {
             isShowPreview: false,
@@ -284,7 +284,7 @@ export default {
         padding: 9px 15px;
         font-size: 12px;
         border-radius: 3px;
-        margin: 0 10px;
+        margin-right: 10px;
 
         &:active {
             color: #3a8ee6;
