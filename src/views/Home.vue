@@ -52,6 +52,7 @@ import generateID from '@/utils/generateID'
 import { listenGlobalKeyDown } from '@/utils/shortcutKey'
 import RealTimeComponentList from '@/components/RealTimeComponentList'
 import CanvasAttr from '@/components/CanvasAttr'
+import { index } from 'mathjs'
 
 export default {
     components: { Editor, ComponentList, AnimationList, EventList, Toolbar, RealTimeComponentList, CanvasAttr },
@@ -91,13 +92,20 @@ export default {
             const index = e.dataTransfer.getData('index')
             const rectInfo = this.editor.getBoundingClientRect()
             if (index) {
-                const component = deepCopy(componentList[index])
+                const component = deepCopy(this.componentListSelect(index))
                 component.style.top = e.clientY - rectInfo.y
                 component.style.left = e.clientX - rectInfo.x
                 component.id = generateID()
                 this.$store.commit('addComponent', { component })
                 this.$store.commit('recordSnapshot')
             }
+        },
+
+        // 在组件列表中选定某个组件 index 是组件的表示名称
+        componentListSelect (index) {
+            return componentList.find(element => {
+                return element.component == index
+            });
         },
 
         handleDragOver(e) {

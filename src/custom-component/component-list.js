@@ -24,10 +24,12 @@ export const commonAttr = {
 }
 
 // 编辑器左侧组件列表
+// 组件type的枚举值 1:基础组件 2:echarts图表 3: 3D效果
 const list = [
     {
         component: 'VText',
         label: '文字',
+        type: '1',
         propValue: '双击编辑文字',
         request: {
             method: 'GET',
@@ -51,8 +53,52 @@ const list = [
         },
     },
     {
+        component: 'Div',
+        label: '空白区域',
+        type: '1',
+        propValue: 'Div',
+        request: {
+            method: 'GET',
+            data: [],
+            url: '',
+            series: false, // 是否定时发送请求
+            time: 1000, // 定时更新时间
+            paramType: '', // string object array
+            requestCount: 0, // 请求次数限制，0 为无限
+        },
+        style: {
+            width: 200,
+            height: 28,
+            backgroundColor: '',
+            fontSize: '',
+            fontWeight: 400,
+            textAlign: '',
+            color: '',
+            x:0,
+            y: 0,
+        },
+    },
+    {
+        component: 'Table',
+        label: '表格',
+        type: '1',
+        propValue: 'Table',
+        style: {
+            width: 200,
+            height: 28,
+            backgroundColor: '',
+            fontSize: '',
+            fontWeight: 400,
+            lineHeight: '',
+            letterSpacing: 0,
+            textAlign: '',
+            color: '',
+        },
+    },
+    {
         component: 'PieChart',
         label: '饼状图',
+        type: '2',
         propValue: 'PieChart',
         request: {
             method: 'GET',
@@ -78,6 +124,7 @@ const list = [
     {
         component: 'AnnularChart',
         label: '环形图',
+        type: '2',
         propValue: 'AnnularChart',
         request: {
             method: 'GET',
@@ -103,6 +150,7 @@ const list = [
     {
         component: 'BarChart',
         label: '柱状图',
+        type: '2',
         propValue: 'BarChart',
         style: {
             width: 200,
@@ -119,6 +167,7 @@ const list = [
     {
         component: 'BubbleChart',
         label: '气泡图',
+        type: '2',
         propValue: 'BubbleChart',
         style: {
             width: 200,
@@ -135,6 +184,7 @@ const list = [
     {
         component: 'MeterChart',
         label: '仪表盘',
+        type: '2',
         propValue: 'MeterChart',
         style: {
             width: 200,
@@ -151,6 +201,7 @@ const list = [
     {
         component: 'Earth',
         label: '地球',
+        type: '3',
         propValue: 'Earth',
         style: {
             width: 200,
@@ -164,38 +215,6 @@ const list = [
             color: '',
         },
     },
-    {
-        component: 'Table',
-        label: '表格',
-        propValue: 'Table',
-        style: {
-            width: 200,
-            height: 28,
-            backgroundColor: '',
-            fontSize: '',
-            fontWeight: 400,
-            lineHeight: '',
-            letterSpacing: 0,
-            textAlign: '',
-            color: '',
-        },
-    },
-    {
-        component: 'Div',
-        label: '空白区域',
-        propValue: 'Div',
-        style: {
-            width: 200,
-            height: 28,
-            backgroundColor: '',
-            fontSize: '',
-            fontWeight: 400,
-            textAlign: '',
-            color: '',
-            x:0,
-            y: 0,
-        },
-    },
 ]
 
 for (let i = 0, len = list.length; i < len; i++) {
@@ -205,3 +224,12 @@ for (let i = 0, len = list.length; i < len; i++) {
 }
 
 export default list
+
+// 组件type的枚举值 1:基础组件 2:echarts图表 3: 3D效果
+export const componentTypes = [
+    { value: '', label: '全部' }, 
+    { value: '1', label: '基础组件' }, 
+    { value: '2', label: 'echart' },
+    { value: '3', label: '3D效果' },
+
+]
