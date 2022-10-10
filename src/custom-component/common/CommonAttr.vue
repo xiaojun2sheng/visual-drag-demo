@@ -18,7 +18,7 @@
                 </el-form>
             </el-collapse-item>
             <Request v-if="curComponent.request"></Request>
-            <Linkage v-if="curComponent.linkage"></Linkage>
+            <!-- <Linkage v-if="curComponent.linkage"></Linkage> -->
         </el-collapse>
     </div>
 </template>

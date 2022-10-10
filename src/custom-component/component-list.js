@@ -57,15 +57,6 @@ const list = [
         label: '空白区域',
         type: '1',
         propValue: 'Div',
-        request: {
-            method: 'GET',
-            data: [],
-            url: '',
-            series: false, // 是否定时发送请求
-            time: 1000, // 定时更新时间
-            paramType: '', // string object array
-            requestCount: 0, // 请求次数限制，0 为无限
-        },
         style: {
             width: 200,
             height: 28,
